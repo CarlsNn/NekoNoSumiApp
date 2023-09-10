@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <div class="version">猫の隅 - Store </div>
+      <strong>Inicia Session</strong>
+    </ion-title>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content >
+  <!-- {Input} -->
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Iniciar Sesion {{ValorEnviar.usuario}}</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="full">
+        <ion-label position="floating">Usuario</ion-label>
+        <!-- Usamos ngModel para indicarle al input el objeto a utilizar-->
+        <ion-input type="text" [(ngModel)]="ValorEnviar.usuario"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <!-- Usamos ngModel para indicarle al input el objeto a utilizar-->
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="ValorEnviar.password"></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <!-- Indicamos mediante el (click) la funcion a quien referenciara-->
+          <ion-button expand="full" (click)="ingresar()">Ingresar</ion-button>
+        </ion-col>
+      </ion-row>
+
+      
+      
+    </ion-card-content>
+    
+  </ion-card>
+  <ion-card>
+    <ion-card class="glass-content ion-text-center">
+      <ion-toolbar>
+        <ion-title size="large">registro</ion-title>
+        <ion-button id="present-alert">Click Me</ion-button>
+      <ion-alert
+        trigger="present-alert"
+        header="Por favor, ingresa tus datos :D"
+        [buttons]="alertButtons"
+        [inputs]="alertInputs"
+      ></ion-alert>
+      </ion-toolbar>
+    </ion-card>
+  </ion-card>
+</ion-content>

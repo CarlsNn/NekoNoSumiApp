@@ -1,0 +1,7 @@
+{
+  "name": "NekoNoSumiApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
